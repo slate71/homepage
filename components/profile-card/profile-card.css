@@ -1,0 +1,16 @@
+/* To do:
+  - style with alluring and readable colors
+  - have padding on all sides
+  - have a border on all sides
+  - use font size 16px
+  - background and font colors I find pleasing
+  - use percentages for widths so it fit nicely on different devices
+*/
+
+aside {
+  font-size: 16px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  padding: 1em;
+  background-color: cyan;
+}

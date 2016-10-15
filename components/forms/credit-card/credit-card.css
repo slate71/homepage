@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+  font-family: helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 100;
+  line-height: 1.618em;
+}
+
+.creditCardForm {
+  width: 320px;
+  margin: 0 auto;
+  padding: 2rem;
+  border: 1px solid #c8c8c8;
+}
+
+.creditCardForm label {
+  display: inline-block;
+  margin: 1em 0;
+  color: #666;
+}
+
+.creditCardForm input[name="full-name"],
+.creditCardForm input[name="card-number"] {
+  display: block;
+  line-height: 3em;
+  padding-left: 1em;
+  border: 1px solid #ccc;
+  margin-bottom: 1em;
+  width: 100%;
+}
+
+.creditCardForm input[type="button"] {
+  height: 44px;
+  border: 1px solid #ccc;
+  background-color: transparent;
+  width: 100%;
+  margin-top: 1em;
+}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Color Builder</title>
+  <link rel="stylesheet" type="text/css" href="color-builder.css">
+</head>
+<body>
+  <form class="colorBuilder">
+    <input type="range" name="red" min="0" max="255" value="0" step="5">
+    <input type="range" name="green" min="0" max="255" value="255" step="5">
+    <input type="range" name="blue" min="0" max="255" value="0" step="5">
+    <input type="range" name="alpha" min="0" max="1" value="1" step="0.01">
+    <textarea></textarea>
+  </form>
+  <script type="text/javascript">
+    var red = document.querySelector('input[name="red"]').value;
+    var green = document.querySelector('input[name="green"]').value;
+    var blue = document.querySelector('input[name="blue"]').value;
+    var alpha = document.querySelector('input[name=alpha').value;
+    document.querySelector('textarea').style.backgroundColor = `rgba(${red}, ${green}, ${blue}, ${alpha})`;
+  </script>
+</body>
+</html>

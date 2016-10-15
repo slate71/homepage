@@ -1,0 +1,35 @@
+form {
+  display: table;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+}
+
+input {
+  border: none;
+  background: none;
+  height: 4.078em;
+  line-height: 1.618em;
+  padding: 1.23em;
+  -webkit-appearance: none;
+}
+
+input[name="submit"] {
+  cursor: pointer;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+}
+
+select {
+  border: none;
+  border-radius: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  height: calc(4.078em - 1px);
+  padding: 0 1.23em;
+  cursor: pointer;
+  background-color: #f8f8f8;
+  color: #666;
+}

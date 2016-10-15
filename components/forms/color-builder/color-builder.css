@@ -1,0 +1,18 @@
+.colorBuilder {
+  box-sizing: border-box;
+  width: 320px;
+  margin: 0 auto;
+  padding: 2rem;
+  border: 1px solid #ccc;
+}
+
+.colorBuilder input,
+.colorBuilder textarea {
+  display: block;
+  width: 100%;
+}
+
+.colorBuilder input[name="red"] ~ input,
+.colorBuilder textarea {
+  margin-top: 1rem;
+}

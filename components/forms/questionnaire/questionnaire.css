@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+  font-family: helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 100;
+}
+
+.questionnaireForm {
+  max-width: 320px;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  padding: 2em;
+}
+
+.questionnaireForm input[type="radio"] {
+  margin-top: 0.809em;
+}
+
+.questionnaireForm label {
+  position: relative;
+  top: 1px;
+}

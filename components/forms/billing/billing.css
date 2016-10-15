@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+  font-family: helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 100;
+  color: #666;
+  line-height: 1.618em;
+}
+
+.billingForm {
+  max-width: 320px;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+}
+
+.billingForm section {
+  padding: 2em;
+}
+
+.billingForm section:first-child {
+  border-bottom: 1px solid #ccc;
+}
+
+.billingForm input {
+  display: block;
+  width: 100%;
+}
+
+.billingForm label:first-child ~ label {
+  display: block;
+  margin-top: 0.809em;
+}
+
+.billingForm section label[for="same-as-billing"],
+.billingForm input[name="same-as-billing"] {
+  display: inline;
+  width: initial;
+  margin-top: 1.618em;
+}

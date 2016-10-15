@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+  font-family: helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 100;
+}
+
+.schedulingForm {
+  max-width: 320px;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  padding: 2em;
+}
+
+.schedulingForm input {
+  display: block;
+  width: 100%;
+  line-height: 3em;
+  padding-left: 1em;
+}
+
+.schedulingForm input[name="date"] ~ * {
+  margin-top: 1em;
+}
