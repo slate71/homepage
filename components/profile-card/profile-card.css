@@ -7,10 +7,14 @@
   - use percentages for widths so it fit nicely on different devices
 */
 
-aside {
-  font-size: 16px;
+* {
   box-sizing: border-box;
+}
+
+aside {
+  max-width: 320px;
+  margin: 0 auto;
   border: 1px solid #ccc;
-  padding: 1em;
-  background-color: cyan;
+  padding: 2em;
+  font-size: 16px;
 }

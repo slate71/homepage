@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+}
+
+.calculator {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  max-width: 414px;
+  max-height: 736px;
+  margin: 0 auto;
+  background-color: #666;
+  color: white;
+}
+
+.calculator input[name="output"] {
+  border: none;
+  width: 100%;
+  padding-right: 16px;
+  line-height: 1em;
+  font-size: 64px;
+  font-weight: 100;
+  text-align: right;
+  color: white;
+  background-color: #333;
+}
+
+.calculator table {
+  width: 100%;
+}
+
+td {
+  display: inline-block;
+  width: 25%;
+  line-height: 1.618em;
+  font-family: BlinkMacSystemFont, sans-serif;
+  font-weight: 100;
+  font-size: 48px;
+  text-align: center;
+  color: aqua;
+}
