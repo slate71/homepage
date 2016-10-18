@@ -1,44 +1,83 @@
-* {
-  font-family: helvetica, sans-serif;
+body {
+  background-color: #e7e7e7;
+  font-family: "Open Sans", helvetica, sans-serif;
   font-size: 16px;
 }
 
-hr {
-  border-bottom: 0;
-  border-color: #ddd;
+ul {
+  background-color: #f9f9f9;
+  box-sizing: border-box;
+  margin: 0 auto;
+  max-width: 414px;
+  padding: 1rem 2rem;
 }
 
 h3 {
-  text-transform: capitalize;
-  font-weight: 400;
+  border-bottom: 1px solid #ccc;
+  color: #999;
   font-size: 1em;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  text-transform: capitalize;
+}
+
+button {
+  font-family: "Open Sans", helvetica, sans-serif;
 }
 
 .button {
-  display: inline-block;
-  vertical-align: middle;
-  line-height: 1em;
-  padding: 0.809em 1.618em;
+  background-color: black;
+  background-color: rgba(0, 0, 0, .8);
   border: none;
-  background-color: #fff;
+  box-shadow: 0 0 4px rgba(0, 0, 0, .125), 1px 2px 2px rgba(0, 0, 0, .3);
+  color: white;
   cursor: pointer;
-  color: #4f4f4f;
-  text-decoration: none;
-  text-transform: uppercase;
+  display: inline-block;
   font-size: 1rem;
   font-weight: 100;
+  line-height: 1em;
+  margin: 1rem 0;
+  padding: 0.809em 1.618em;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  box-shadow: 0px 0px 4px rgba(0, 0, 0, .125), 1px 2px 2px rgba(0, 0, 0, .3);
+  user-select: none;
+  vertical-align: middle;
+  z-index: 1;
 }
 
-.button:focus {
+.button span {
+  font-weight: 100;
+  position: relative;
+  z-index: 2;
+}
+
+.button::after {
+  background-color: white;
+  background-color: rgba(0, 0, 0, .25);
+  content: '';
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+  width: 100%;
+  z-index: 3;
+}
+
+.button:focus,
+.button:hover {
+  box-shadow: 0 0 4px rgba(0, 0, 0, .125), 2px 4px 4px rgba(0, 0, 0, .2);
   outline: none;
 }
 
-.button:hover {
-  box-shadow: 0px 0px 4px rgba(0, 0, 0, .125), 2px 4px 4px rgba(0, 0, 0, .2);
+.button:focus::after,
+.button:hover::after {
+  transition: width .5s cubic-bezier(0.77, 0, 1.75, 1);
+  width: 0;
 }
 
 .button:active {
@@ -47,8 +86,10 @@ h3 {
 
 .button-sm {
   font-size: 0.75rem;
+  margin-bottom: 0;
 }
 
 .button-lg {
   font-size: 1.25rem;
+  margin-top: 0;
 }
