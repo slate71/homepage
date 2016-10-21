@@ -1,19 +1,25 @@
-* {
-  box-sizing: border-box;
-  font-family: helvetica, sans-serif;
-  font-size: 14px;
-  font-weight: 100;
-  color: #666;
-  line-height: 1.618em;
+body {
+  background-color: #888;
+}
+
+.clear-fix:after {
+  clear: both;
+  content: '';
+  display: block;
 }
 
 .billingForm {
-  max-width: 320px;
-  margin: 0 auto;
+  background-color: white;
   border: 1px solid #ccc;
+  color: #666;
+  font-family: 'Open Sans', helvetica, sans-serif;
+  font-weight: 100;
+  margin: 0 auto;
+  max-width: 640px;
 }
 
 .billingForm section {
+  box-sizing: border-box;
   padding: 2em;
 }
 
@@ -22,18 +28,46 @@
 }
 
 .billingForm input {
-  display: block;
-  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-sizing: border-box;
+  display: inline-block;
+  font-family: 'Open Sans', helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 1.618em;
+  margin: 0;
+  padding: 0;
+  width: 48%;
 }
 
-.billingForm label:first-child ~ label {
-  display: block;
-  margin-top: 0.809em;
+.billingForm input:nth-child(n+4) {
+  margin-top: 1em;
 }
 
-.billingForm section label[for="same-as-billing"],
-.billingForm input[name="same-as-billing"] {
-  display: inline;
-  width: initial;
-  margin-top: 1.618em;
+.billingForm input:nth-child(2n) {
+  margin-right: .8em;
+}
+
+.billingForm input[type="text"] {
+  padding: .809em 1em;
+}
+
+.billingForm input[name="address-line-1"] {
+  width: 60%;
+}
+
+.billingForm input[name="address-line-2"] {
+  width: 36%;
+}
+
+.billingForm input[name="same-as-billing"],
+.billingForm label[for="same-as-billing"] {
+  margin-top: 1em;
+  width: auto;
+}
+
+.billingForm label[for="same-as-billing"] {
+  display: inline-block;
+  position: relative;
+  top: 2px;
 }
