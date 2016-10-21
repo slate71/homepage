@@ -1,18 +1,57 @@
-.colorBuilder {
-  box-sizing: border-box;
-  width: 320px;
-  margin: 0 auto;
-  padding: 2rem;
-  border: 1px solid #ccc;
+body {
+  background-color: #888;
 }
 
-.colorBuilder input,
-.colorBuilder textarea {
-  display: block;
+.colorBuilder {
+  background-color: white;
+  border-radius: 7px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, .125), 3px 3px 7px rgba(0, 0, 0, .4);
+  box-sizing: border-box;
+  font-family: 'Open Sans', helvetica, sans-serif;
+  max-width: 414px;
+  margin: 0 auto;
+  padding-bottom: .5rem;
+}
+
+.colorBuilder-sample {
+  align-items: center;
+  border-radius: 7px 7px 0 0;
+  color: #444;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: calc(414px / 1.618);
+  padding: 0;
+  text-align: center;
   width: 100%;
 }
 
-.colorBuilder input[name="red"] ~ input,
-.colorBuilder textarea {
-  margin-top: 1rem;
+.colorBuilder input {
+  display: block;
+  margin: 2rem auto;
+  width: 90%;
+}
+
+.colorBuilder input[type="range"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 2px;
+  height: 4px;
+}
+
+.colorBuilder input[name="red"] {
+  background: linear-gradient(to right, white, red);
+}
+
+.colorBuilder input[name="green"] {
+  background: linear-gradient(to right, white, green);
+}
+
+.colorBuilder input[name="blue"] {
+  background: linear-gradient(to right, white, blue);
+}
+
+.colorBuilder input[name="alpha"] {
+  background: linear-gradient(to right, transparent, grey);
 }
