@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var quote = document.querySelector('article');
   var aside = document.querySelector('aside');
 
+  // Don't animate until image is loaded... optimize image
   Velocity(quote,
            {opacity: 1},
            {delay: 500, duration: 1000, display: 'flex'});
