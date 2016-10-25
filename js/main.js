@@ -6,14 +6,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
   Velocity(quote,
            {opacity: 1},
-           {duration: 500, display: 'flex'});
+           {delay: 500, duration: 1000, display: 'flex'});
   Velocity(bg,
            {opacity: .6 },
-           {duration: 500, display: 'block'});
-  Velocity(nav,
-           'slideDown',
-           {delay: 500, duration: 500, display: 'flex'});
+           {delay: 500, duration: 1000, display: 'block'})
+    .then(() => Velocity(nav,
+                         'slideDown',
+                         {delay: 500, duration: 500, display: 'flex'}));
   Velocity(aside,
            {opacity: 1},
-           {duration: 500, display: 'flex'});
+           {delay: 500, duration: 1000, display: 'flex'});
 });
