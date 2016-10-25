@@ -5,7 +5,7 @@ body {
 }
 
 .bgImage {
-  background: black url('../img/ocean.jpg') no-repeat;
+  background: black url('../img/sunset.jpg') no-repeat;
   background-size: cover;
   background-position: center top;
   bottom: 0;
