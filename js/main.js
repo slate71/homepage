@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+window.addEventListener('pageshow', function() {
   var bg = document.querySelector('.bgImage');
   var nav = document.querySelector('nav');
   var quote = document.querySelector('article');
