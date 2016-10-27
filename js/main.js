@@ -1,4 +1,4 @@
-(function() {
+{
   const $ = document.querySelector.bind(document);
   const bg = $('.bgImage');
   const nav = $('nav');
@@ -10,19 +10,20 @@
 
     Velocity(quote,
              {opacity: 1},
-             {delay: 500, duration: 1000, display: 'flex'});
+             {duration: 1000, display: 'flex'});
 
     Velocity(bg,
              {opacity: .6 },
-             {delay: 500, duration: 1000, display: 'block'})
-      .then(() => Velocity(nav,
-                           'slideDown',
-                           {delay: 500, duration: 500, display: 'flex'}));
-
-    Velocity(aside,
+             {duration: 1000, display: 'block'})
+      .then(() => {
+        Velocity(nav,
+                 {opacity: 1},
+                 {duration: 500, display: 'flex'})
+        Velocity(aside,
              {opacity: 1},
-             {delay: 500, duration: 1000, display: 'flex'});
+             {duration: 1000, display: 'flex'});
+      });
   }
 
   window.addEventListener('pageshow', handlePageshow);
-})();
+}
