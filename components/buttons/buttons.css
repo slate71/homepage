@@ -1,10 +1,33 @@
 body {
   background-color: #888;
   font-family: "Open Sans", helvetica, sans-serif;
-  font-size: 16px;
 }
 
-ul {
+button {
+  font-family: "Open Sans", helvetica, sans-serif;
+}
+
+a.back-home {
+  float: left;
+}
+
+a.mobile-back-home {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  a.back-home {
+    display: none;
+  }
+
+  a.mobile-back-home {
+    display: block;
+    margin: .809rem auto;
+    width: 72px;
+  }
+}
+
+.buttons {
   background-color: #f9f9f9;
   box-sizing: border-box;
   margin: 0 auto;
@@ -12,17 +35,27 @@ ul {
   padding: 1rem 2rem;
 }
 
-h3 {
+@media (max-width: 415px) {
+  body {
+    background: #f9f9f9;
+  }
+
+  .buttons {
+    left: 0;
+    margin: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
+
+.button-header {
   border-bottom: 1px solid #ccc;
   color: #999;
   font-size: 1em;
   font-weight: 400;
   margin-bottom: 0.5rem;
   text-transform: capitalize;
-}
-
-button {
-  font-family: "Open Sans", helvetica, sans-serif;
 }
 
 .button {
@@ -49,21 +82,15 @@ button {
   z-index: 1;
 }
 
-.button span {
-  font-weight: 100;
-  position: relative;
-  z-index: 2;
-}
-
 .button::after {
   background-color: white;
-  background-color: rgba(0, 0, 0, .25);
+  background-color: rgba(0, 0, 0, .3);
   content: '';
   height: 100%;
   position: absolute;
   right: 0;
   top: 0;
-  transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1);
   width: 100%;
   z-index: 3;
 }
@@ -76,7 +103,7 @@ button {
 
 .button:focus::after,
 .button:hover::after {
-  transition: width .5s cubic-bezier(0.77, 0, 1.75, 1);
+  transition: width .3s cubic-bezier(0.77, 0, 1.75, 1);
   width: 0;
 }
 
