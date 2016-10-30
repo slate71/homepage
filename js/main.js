@@ -1,4 +1,4 @@
-{
+(function() {
   const $ = document.querySelector.bind(document);
   const bg = $('.bgImage');
   const nav = $('nav');
@@ -26,4 +26,4 @@
   }
 
   window.addEventListener('pageshow', handlePageshow);
-}
+})();
