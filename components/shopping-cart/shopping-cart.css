@@ -41,6 +41,41 @@ a {
   height: 1.618rem;
 }
 
+.top-bar a {
+  display: block;
+  position: relative;
+  color: white;
+  font-size: 14px;
+  line-height: 1.618rem;
+  height: 1.618rem;
+  padding-left: 1.618rem;
+  width: 116px;
+}
+
+.top-bar a::after {
+  content: '';
+  display: block;
+  background: rgba(255, 255, 255, .25);
+  height: 100%;
+  position: absolute;
+  transition: width .2s cubic-bezier(0.77, 0, 0.175, 1);
+  top: 0;
+  left: 0;
+  width: 0;
+}
+
+.top-bar a:hover::after {
+  transition: width .2s cubic-bezier(0.77, 0, 1.75, 1);
+  width: 116px;
+}
+
+.top-bar a:active::after {
+  content: "Bye now!";
+  text-align: center;
+  background-color: white;
+  color: black;
+}
+
 .divider {
   border-top: 1px solid grey;
   margin: .809rem 0;
@@ -86,6 +121,7 @@ a {
   margin: .405rem 0;
   padding: .405rem .809rem;
   text-transform: lowercase;
+  cursor: pointer;
 }
 
 .product-addToCart:hover {

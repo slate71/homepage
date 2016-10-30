@@ -1,0 +1,28 @@
+.form {
+  border-bottom: 1px solid black;
+  box-sizing: border-box;
+  display: flex;
+  min-height: 768px;
+  padding: 2rem;
+}
+
+.form:last-child {
+  border-bottom: none;
+}
+
+.description,
+.preview {
+  max-width: 50%;
+  width: 100%;
+}
+
+.description {
+  box-sizing: border-box;
+  padding: 2rem 4rem 2rem 2rem;
+}
+
+iframe {
+  border: none;
+  height: 100%;
+  width: 100%;
+}

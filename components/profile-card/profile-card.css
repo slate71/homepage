@@ -6,15 +6,82 @@
   - background and font colors I find pleasing
   - use percentages for widths so it fit nicely on different devices
 */
-
 * {
   box-sizing: border-box;
 }
 
+body {
+  background: #888;
+}
+
+.container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
 aside {
-  max-width: 320px;
-  margin: 0 auto;
+  background: white;
   border: 1px solid #ccc;
-  padding: 2em;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
   font-size: 16px;
+  margin-top: 2em;
+  max-width: 415px;
+  padding: 2em;
+}
+
+@media (max-width: 414px) {
+  aside {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin-top: 0;
+  }
+}
+
+img {
+  display: block;
+  border-radius: 50%;
+  margin: 0 auto;
+  width: 33.33%;
+}
+
+a.fa {
+  text-decoration: none;
+  color: black;
+  font-size: 1.618rem;
+  margin-right: 1.618rem;
+  margin-bottom: 1.618rem;
+  transition: .3s;
+  width: 25px;
+}
+
+a.fa:hover {
+  transform: translateY(-3px);
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+nav h3,
+nav a {
+  margin: 1.618rem 0 0 0;
+  line-height: 1.618rem;
+  font-size: 1.618rem;
+}
+
+p {
+  margin-top: 0;
 }
