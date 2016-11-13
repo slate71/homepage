@@ -6,25 +6,66 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Color Builder</title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../../../css/vendor/normalize.css">
+  <link rel="stylesheet" type="text/css" href="../../../css/vendor/font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="color-builder.css">
 </head>
 
 <body>
-  <form class="colorBuilder">
-    <div class="colorBuilder-sample">
-      <div>rgba(0, 255, 0, 0.5)</div>
-    </div>
-    <input type="range" name="red" min="0" max="255" value="0" step="5">
-    <input type="range" name="green" min="0" max="255" value="255" step="5">
-    <input type="range" name="blue" min="0" max="255" value="0" step="5">
-    <input type="range" name="alpha" min="0" max="1" value=".5" step="0.01">
+  <!-- A riff of of https://coolors.co/ -->
+  <h3 class="h3-colorBuilder">rgba(55, 34, 72, 0.8)</h3>
+  <div class="go-back">
+    <a href="../#color">
+      <i class="fa fa-arrow-left" aria-hidden="true"></i>
+      Back
+    </a>
+  </div>
+  <form class="ColorBuilder">
+    <fieldset class="ColorBuilder__color--red">
+      <label for="red-value">Red</label>
+      <fieldset class="ColorBuilder__color__buttons">
+        <input class="ColorBuilder__color--red__value" type="text" name="red-value" value="55">
+        <input class="ColorBuilder__color--red__decrease" type="button" name="red-decrease" value="-">
+        <input class="ColorBuilder__color--red__increase" type="button" name="red-increase" value="+">
+      </fieldset>
+      <input class="ColorBuilder__color--red__range" type="range" name="red-range" min="0" max="255" value="55" step="5">
+    </fieldset>
+    <fieldset class="ColorBuilder__color--green">
+      <label for="green-value">Green</label>
+      <fieldset class="ColorBuilder__color__buttons">
+        <input class="ColorBuilder__color--green__value" type="text" name="green-value" value="34">
+        <input class="ColorBuilder__color--green__decrease" type="button" name="green-value-minus" value="-">
+        <input class="ColorBuilder__color--green__increase" type="button" name="green-value-plus" value="+">
+      </fieldset>
+      <input class="ColorBuilder__color--green__range" type="range" name="green-range" min="0" max="255" value="34" step="5">
+    </fieldset>
+    <fieldset class="ColorBuilder__color--blue">
+      <label for="blue-value">Blue</label>
+      <fieldset class="ColorBuilder__color__buttons">
+        <input class="ColorBuilder__color--blue__value" type="text" name="blue-value" value="72">
+        <input class="ColorBuilder__color--blue__decrease" type="button" name="blue-value-minus" value="-">
+        <input class="ColorBuilder__color--blue__increase" type="button" name="blue-value-plus" value="+">
+      </fieldset>
+      <input class="ColorBuilder__color--blue__range" type="range" name="blue-range" min="0" max="255" value="72" step="5">
+    </fieldset>
+    <fieldset class="ColorBuilder__color--alpha">
+      <label for="alpha-value">Alpha</label>
+      <fieldset class="ColorBuilder__color__buttons">
+        <input class="ColorBuilder__color--alpha__value" type="text" name="alpha-value" value="0.8">
+        <input class="ColorBuilder__color--alpha__decrease" type="button" name="alpha-value-minus" value="-">
+        <input class="ColorBuilder__color--alpha__increase" type="button" name="alpha-value-plus" value="+">
+      </fieldset>
+      <input class="ColorBuilder__color--alpha__range" type="range" name="alpha-range" min="0" max="1" value=".8" step="0.01">
+    </fieldset>
   </form>
+  <i class="fa fa-sliders" aria-hidden="true"></i>
+
   <script type="text/javascript">
-  var red = document.querySelector('input[name="red"]').value;
-  var green = document.querySelector('input[name="green"]').value;
-  var blue = document.querySelector('input[name="blue"]').value;
-  var alpha = document.querySelector('input[name="alpha"]').value;
-  document.querySelector('.colorBuilder-sample').style.backgroundColor = `rgba(${red}, ${green}, ${blue}, ${alpha})`;
+    var red = document.querySelector('input[name="red-range"]').value;
+    var green = document.querySelector('input[name="green-range"]').value;
+    var blue = document.querySelector('input[name="blue-range"]').value;
+    var alpha = document.querySelector('input[name="alpha-range"]').value;
+    document.body.style.backgroundColor = `rgba(${red}, ${green}, ${blue}, ${alpha})`;
   </script>
 </body>
 

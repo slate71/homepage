@@ -1,57 +1,147 @@
-body {
-  background-color: #888;
+.h3-colorBuilder {
+  color: #eee;
+  font-family: 'Open Sans', helvetica, sans-serif;
+  margin: 2rem;
+  text-align: center;
 }
 
-.colorBuilder {
+.go-back {
+  margin: 2em auto 1em;
+  max-width: 414px;
+}
+
+.go-back a {
+  color: white;
+  font-family: 'Open Sans', helvetica, sans-serif;
+  font-size: 14px;
+  padding-right: .202em;
+  text-decoration: none;
+}
+
+.go-back a:hover,
+.go-back a:focus {
+  border-bottom: 1px solid white;
+}
+
+.go-back .fa-arrow-left:before {
+  bottom: 2px;
+  font-size: 10px;
+  position: relative;
+}
+
+.fa-sliders {
+  color: #eee;
+  font-size: 2rem;
+  margin: 2rem 0;
+  text-align: center;
+  width: 100%;
+}
+
+/* ColorBuilder component styles */
+
+.ColorBuilder {
   background-color: white;
   border-radius: 7px;
   box-shadow: 0 0 4px rgba(0, 0, 0, .125), 3px 3px 7px rgba(0, 0, 0, .4);
   box-sizing: border-box;
   font-family: 'Open Sans', helvetica, sans-serif;
-  max-width: 414px;
   margin: 0 auto;
-  padding-bottom: .5rem;
+  max-width: 414px;
+  padding: 1.618rem;
 }
 
-.colorBuilder-sample {
-  align-items: center;
-  border-radius: 7px 7px 0 0;
-  color: #444;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: calc(414px / 1.618);
+.ColorBuilder label {
+  color: #999;
+  font-size: 12px;
+  position: relative;
+  top: 4px
+}
+
+.ColorBuilder__color--red,
+.ColorBuilder__color--green,
+.ColorBuilder__color--blue,
+.ColorBuilder__color--alpha {
+  border: 0;
+  box-sizing: border-box;
+  padding: 1rem;
+}
+
+.ColorBuilder__color__buttons {
+  border: 0;
+  float: right;
   padding: 0;
-  text-align: center;
-  width: 100%;
 }
 
-.colorBuilder input {
-  display: block;
-  margin: 2rem auto;
-  width: 90%;
+.ColorBuilder__color--red__value,
+.ColorBuilder__color--green__value,
+.ColorBuilder__color--blue__value,
+.ColorBuilder__color--alpha__value {
+  border: 1px solid #ccc;
+  border-radius: 0.809rem 0 0 0.809rem;
+  box-sizing: border-box;
+  color: #999;
+  float: left;
+  font-size: 12px;
+  height: 26px;
+  padding-right: .5em;
+  text-align: right;
+  width: 3em;
 }
 
-.colorBuilder input[type="range"] {
+.ColorBuilder__color--red__decrease,
+.ColorBuilder__color--green__decrease,
+.ColorBuilder__color--blue__decrease,
+.ColorBuilder__color--alpha__decrease {
+  background: 0;
+  border: 1px solid #ccc;
+  border-left: 0;
+  border-radius: 0;
+  border-right: 0;
+  box-sizing: border-box;
+  color: #999;
+  float: left;
+  height: 26px;
+}
+
+.ColorBuilder__color--red__increase,
+.ColorBuilder__color--green__increase,
+.ColorBuilder__color--blue__increase,
+.ColorBuilder__color--alpha__increase {
+  background: 0;
+  border: 1px solid #ccc;
+  border-radius: 0 .809rem .809rem 0;
+  box-sizing: border-box;
+  color: #999;
+  float: left;
+  height: 26px;
+}
+
+.ColorBuilder__color--red__range,
+.ColorBuilder__color--green__range,
+.ColorBuilder__color--blue__range,
+.ColorBuilder__color--alpha__range {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  border-radius: 2px;
-  height: 4px;
+  border-radius: 5px;
+  clear: both;
+  height: 10px;
+  margin-top: .809rem;
+  width: 100%;
 }
 
-.colorBuilder input[name="red"] {
-  background: linear-gradient(to right, white, red);
+.ColorBuilder__color--red__range {
+  background: linear-gradient(to right, rgb(0, 34, 72), rgb(255, 34, 72));
 }
 
-.colorBuilder input[name="green"] {
-  background: linear-gradient(to right, white, green);
+.ColorBuilder__color--green__range {
+  background: linear-gradient(to right, rgb(55, 0, 72), rgb(55, 255, 72));
 }
 
-.colorBuilder input[name="blue"] {
-  background: linear-gradient(to right, white, blue);
+.ColorBuilder__color--blue__range {
+  background: linear-gradient(to right, rgb(55, 34, 0), rgb(55, 34, 255));
 }
 
-.colorBuilder input[name="alpha"] {
-  background: linear-gradient(to right, transparent, grey);
+.ColorBuilder__color--alpha__range {
+  background: linear-gradient(to right, rgba(55, 34, 72, 0), rgba(55, 34, 72, 1));
 }

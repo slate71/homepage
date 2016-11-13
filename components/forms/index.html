@@ -7,159 +7,186 @@
   <title>Forms</title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="../../css/vendor/normalize.css">
+  <link rel="stylesheet" type="text/css" href="../../css/vendor/font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="forms.css">
-  <link rel="stylesheet" type="text/css" href="billing/billing.css">
-  <link rel="stylesheet" type="text/css" href="color-builder/color-builder.css">
 </head>
 
 <body>
-  <section id="billingForm" class="billing form">
-    <div class="description">
-      <h2>
-        A Shipping and Billing Address Form
-      </h2>
-      <p>
-        ...for retrieving a customer’s shipping and billing information. Use one form
-        element for both collections. It should have two sections, one with labels
-        and inputs for shipping information, and one with labels and inputs for
-        billing information. Both sections should have the following labels and
-        inputs:
-      </p>
-      <ul>
-        <li>First name</li>
-        <li>Last name</li>
-        <li>Address</li>
-        <li>City</li>
-        <li>Country</li>
-      </ul>
-      <p>
-        Also, include a label and checkbox element indicating that shipping should
-        match the billing form’s input data.
-      </p>
-      <p>
-        <a href="billing">View Form</a>
-      </p>
-    </div>
-    <div class="preview">
-      <iframe src="billing"></iframe>
-    </div>
-  </section>
-  <section id="color-builder" class="color-builder form">
-    <div class="description">
-      <h2>
-        A color building form composed of:
-      </h2>
+  <header class="go-back">
+    <a href="../../">
+      <i class="fa fa-arrow-left" aria-hidden="true"></i>
+      Home
+    </a>
+  </header>
 
-      <ul>
-        <li>
-          Three slider inputs representing red, green, and blue. Use input
-          properties to set a min value of 0, max value of 255, and step of 5.
-        </li>
-        <li>
-          One slider input representing alpha. Use input properties to set a min
-          of 0, max of 1, and step of 0.01.
-        </li>
-        <li>
-          A text area where the color will be generated.
-        </li>
-      </ul>
-      <a href="color-builder">View Form</a>
-    </div>
-    <div class="preview">
-      <iframe src="color-builder"></iframe>
-    </div>
-  </section>
-  <section id="" class="form">
-    <div class="description">
-      <h2>
-        A Credit / Debit Card Form
+  <section id="billing" class="Form Form--billing">
+    <div class="Form__description">
+      <hr class="Form__hr">
+      <h2 class="Form__header">
+        Shipping and Billing Address Form
       </h2>
-      <p>
-        usable to collect a customer’s billing information when making
-        purchases. It should include labels and inputs for:
-      </p>
-      <ul>
-        <li>The cardholder’s full name.
-        <li>The 16-digit card number. Set the maximum character count of the
-          input to 19: 16 characters for the card number, and 3 for the typical
-          hyphens.
-        <li>A CSV code: The three-digit security code on the back of the card,
-          assuming the cardholder has the physical card.
-        <li>A dropdown representing the card’s expiration month.
-        <li>A dropdown representing the card’s expiration year. Start at the
-          current year and add an option for up to 15 years from the current
-          year.
-      </ul>
-      <a href="credit-card">View Form</a>
+      <h3 class="Form__subheader">
+        Retrieve a customer’s shipping and billing information with ease.
+      </h3>
+      <a class="Form__btn" href="billing">
+        View the Demo
+        <span class="fa fa-arrow-right"></span>
+      </a>
     </div>
-    <div class="preview">
-      <iframe src="credit-card"></iframe>
+    <div class="Form__preview">
+      <a href="billing">
+        <img src="../../img/billing-form.png" width="414">
+      </a>
     </div>
   </section>
-  <section id="" class="form">
-    <div class="description">
-      <h2>
-        A login form of your own creation containing at least 3 distinct input
-        types. Look around the web for inspiration.
-      </h2>
-      <a href="login">View Form</a>
-    </div>
-    <div class="preview">
-      <iframe src="login"></iframe>
-    </div>
-  </section>
-  <section id="" class="form">
-    <div class="description">
-      A questionnaire containing a label and input for
-4 or more Radio buttons each with dinstinctive text. Some ideas would be 4 distinct ice cream flavors, the best restaurants in your town, or the best
-An “other” radio input, accompanied by a text input for the user to enter their own answer
-    </div>
-    <a href="questionnaire">View Form</a>
-    <div class="preview">
-      <iframe src="questionnaire"></iframe>
-    </div>
-  </section>
-  <section id="" class="form">
-    <div class="description">
-      A Scheduling Form usable for scheduling appointments. Include labels and inputs for a(n):
 
-Date input
-Time input
-Timezone selection input
-Message text area
-Contact number
-Email address
-    <a href="scheduling">View Form</a>
+  <section id="color" class="Form Form--color-builder">
+    <div class="Form__description">
+      <hr class="Form__hr">
+      <h2 class="Form__header">
+        Color builder
+      </h2>
+      <h3 class="Form__subheader">
+        Three slider inputs representing red, green, and blue.
+        One slider input representing alpha.
+        A text area where the color will be generated.
+      </h3>
+      <a class="Form__btn" href="color-builder">
+        What's you're favorite color?
+        <span class="fa fa-arrow-right"></span>
+      </a>
     </div>
-    <div class="preview">
-      <iframe src="scheduling"></iframe>
-    </div>
-  </section>
-  <section id="" class="form">
-    <div class="description">
-      A Search Form and a dropdown list of categories consisting of the following inputs:
-The “Search Box” as a text input
-A dropdown (select input) containing at least 6 options representing categories
-And a submit button, with the text “Search”
-    <a href="search">View Form</a>
-    </div>
-    <div class="preview">
-      <iframe src="search"></iframe>
+    <div class="Form__preview">
+      <a href="color-builder">
+        <img src="../../img/color-builder.png" width="414">
+      </a>
     </div>
   </section>
-  <section id="" class="form">
-    <div class="description">
-      A Signup Form containing a label and input for:
-The user’s first name
-The user’s last name
-The user’s email address
-The user’s date of birth
-The user’s password
-A submit button
-    <a href="signup">View Form</a>
+
+  <section id="credit-card" class="Form Form--payment">
+    <div class="Form__description">
+      <hr class="Form__hr">
+      <h2 class="Form__header">
+        Credit / Debit Card Payment Form
+      </h2>
+      <h3>
+        Collect a customer’s billing information when making
+        purchases.
+      </h3>
+      <a class="Form__btn" href="credit-card">
+        Get Paid
+        <span class="fa fa-arrow-right"></span>
+      </a>
     </div>
-    <div class="preview">
-      <iframe src="signup"></iframe>
+    <div class="Form__preview">
+      <a href="credit-card">
+        <img src="../../img/credit-card.png" width="414">
+      </a>
+    </div>
+  </section>
+
+  <section id="login" class="Form Form--login">
+    <div class="Form__description">
+      <hr class="Form__hr">
+      <h2 class="Form__header">
+        Login form
+      </h2>
+      <h3>
+        Get in there...
+      </h3>
+      <a class="Form__btn" href="login">
+        Log in
+        <span class="fa fa-arrow-right"></span>
+      </a>
+    </div>
+    <div class="Form__preview">
+      <a href="login">
+        <img src="../../img/login.png" width="340">
+      </a>
+    </div>
+  </section>
+
+  <section id="questionnaire" class="Form Form--questionnaire">
+    <div class="Form__description">
+      <hr class="Form__hr">
+      <h2 class="Form__header">
+        Questionnaire
+      </h2>
+      <h3 class="Form__subheader">
+        We have questions, you have answers.
+      </h3>
+      <a class="Form__btn" href="questionnaire">
+        You won't believe what happens next
+        <span class="fa fa-arrow-right"></span>
+      </a>
+    </div>
+    <div class="Form__preview">
+      <a href="questionnaire">
+        <img src="../../img/questionnaire.png" width="414">
+      </a>
+    </div>
+  </section>
+
+  <section id="scheduler" class="Form Form--scheduler">
+    <div class="Form__description">
+      <hr class="Form__hr">
+      <h2 class="Form__header">
+        Scheduling Form
+      </h2>
+      <h3 class="Form__subheader">
+        How's next Tuesday?
+      </h3>
+      <a class="Form__btn" href="scheduling">
+        Pencil it in
+        <span class="fa fa-arrow-right"></span>
+      </a>
+    </div>
+    <div class="Form__preview">
+      <a href="scheduling">
+        <img src="../../img/scheduler.png" width="556">
+      </a>
+    </div>
+  </section>
+
+  <section id="search" class="Form Form--search">
+    <div class="Form__description">
+    <hr class="Form__hr">
+    <h2 class="Form__header">
+      Search Form and dropdown
+    </h2>
+    <h3 class="Form__subheader">
+      What are you looking for?
+    </h3>
+    <a class="Form__btn" href="search">
+      Find it
+      <span class="fa fa-arrow-right"></span>
+    </a>
+    </div>
+    <div class="Form__preview">
+      <a href="search">
+        <img src="../../img/search.png" width="415">
+      </a>
+    </div>
+  </section>
+
+  <section id="signup" class="Form Form--signup">
+    <div class="Form__description">
+    <hr class="Form__hr">
+    <h2 class="Form__header">
+      Signup Form
+    </h2>
+    <h3 class="Form__subheader">
+      We'll need some personal identification.
+    </h3>
+    <a class="Form__btn" href="signup">
+      Join the club
+      <span class="fa fa-arrow-right"></span>
+    </a>
+    </div>
+    <div class="Form__preview">
+      <a href="signup">
+        <img src="../../img/signup.png" width="550">
+      </a>
     </div>
   </section>
 </body>

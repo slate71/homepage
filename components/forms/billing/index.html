@@ -6,30 +6,74 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Billing Form</title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../../../css/vendor/normalize.css">
+  <link rel="stylesheet" type="text/css" href="../../../css/vendor/font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="billing.css">
 </head>
 
 <body>
-  <form class="billingForm clear-fix">
-    <section class="billing clear-fix">
-      <h3>Billing Address</h3>
-      <input type="text" name="first-name" placeholder="First name">
-      <input type="text" name="last-name" placeholder="Last name">
-      <input type="text" name="address-line-1" placeholder="Address">
-      <input type="text" name="address-line-2" placeholder="Apt, suite, etc (optional)">
-      <input type="text" name="city" placeholder="City">
-      <input type="text" name="country" placeholder="Country">
+  <div class="go-back">
+    <a href="../#billing">
+      <i class="fa fa-arrow-left" aria-hidden="true"></i>
+      Back
+    </a>
+  </div>
+  <form class="BillingForm">
+    <section class="BillingForm__billing">
+      <h3 class="BillingForm__header">Billing Address</h3>
+      <fieldset class="BillingForm__first">
+        <label for="first-name">First name</label>
+        <input type="text" name="first-name" placeholder="First name">
+      </fieldset>
+      <fieldset class="BillingForm__last">
+        <label for="last-name">Last name</label>
+        <input type="text" name="last-name" placeholder="Last name">
+      </fieldset>
+      <fieldset class="BillingForm__address1">
+        <label for="address-line-1">Address</label>
+        <input type="text" name="address-line-1" placeholder="Address">
+      </fieldset>
+      <fieldset class="BillingForm__address2">
+        <label for="address-line-2">Apt, suite, etc (optional)</label>
+        <input type="text" name="address-line-2" placeholder="Apt, suite, etc (optional)">
+      </fieldset>
+      <fieldset class="BillingForm__city">
+        <label for="city">City</label>
+        <input type="text" name="city" placeholder="City">
+      </fieldset>
+      <fieldset class="BillingForm__country">
+        <label for="country">Country</label>
+        <input type="text" name="country" placeholder="Country">
+      </fieldset>
       <input type="checkbox" name="same-as-billing" checked>
       <label for="same-as-billing">My shipping address is the same as my billing address.</label>
     </section>
-    <section class="shipping clear-fix">
-      <h3>Shipping Address</h3>
-      <input type="text" name="first-name" placeholder="First name">
-      <input type="text" name="last-name" placeholder="Last name">
-      <input type="text" name="address-line-1" placeholder="Address">
-      <input type="text" name="address-line-2" placeholder="Apt, suite, etc (optional)">
-      <input type="text" name="city" placeholder="City">
-      <input type="text" name="country" placeholder="Country">
+    <section class="BillingForm__shipping">
+      <h3 class="BillingForm__header">Shipping Address</h3>
+      <fieldset class="BillingForm__first">
+        <label for="first-name">First name</label>
+        <input type="text" name="first-name" placeholder="First name">
+      </fieldset>
+      <fieldset class="BillingForm__last">
+        <label for="last-name">Last name</label>
+        <input type="text" name="last-name" placeholder="Last name">
+      </fieldset>
+      <fieldset class="BillingForm__address1">
+        <label for="address-line-1">Address</label>
+        <input type="text" name="address-line-1" placeholder="Address">
+      </fieldset>
+      <fieldset class="BillingForm__address2">
+        <label for="address-line-2">Apt, suite, etc (optional)</label>
+        <input type="text" name="address-line-2" placeholder="Apt, suite, etc (optional)">
+      </fieldset>
+      <fieldset class="BillingForm__city">
+        <label for="city">City</label>
+        <input type="text" name="city" placeholder="City">
+      </fieldset>
+      <fieldset class="BillingForm__country">
+        <label for="country">Country</label>
+        <input type="text" name="country" placeholder="Country">
+      </fieldset>
     </section>
   </form>
 </body>

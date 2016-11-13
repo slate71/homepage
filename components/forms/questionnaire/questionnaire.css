@@ -1,56 +1,92 @@
-* {
+body {
+  background: #174f7c;
+}
+
+.go-back {
+  margin: 2em auto 1em;
+  max-width: 414px;
+  width: 100%;
+}
+
+.go-back a {
+  color: white;
+  font-family: 'Open Sans', helvetica, sans-serif;
+  font-size: 14px;
+  padding-right: .202em;
+  text-decoration: none;
+}
+
+.go-back a:hover,
+.go-back a:focus {
+  border-bottom: 1px solid white;
+}
+
+.go-back .fa-arrow-left:before {
+  bottom: 2px;
+  font-size: 10px;
+  position: relative;
+}
+
+/* QuestionnarieForm component */
+
+.QuestionnaireForm {
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 3px;
   box-sizing: border-box;
   font-family: 'Open Sans', helvetica, sans-serif;
   font-size: 14px;
   font-weight: 100;
+  margin: 0 auto;
+  max-width: 414px;
+  padding: 2em;
 }
 
-h3 {
+.QuestionnaireForm__header {
+  border-bottom: 1px solid #ccc;
   font-size: 1.618rem;
   line-height: 2rem;
+  margin: 0 0 1.618rem 0;
+  padding: 0 0 1rem 0;
+}
+
+.QuestionnaireForm__choices {
   margin: 0;
   padding: 0;
 }
 
-ul {
-  margin: 0;
-  padding: 0;
-}
-
-li {
+.QuestionnaireForm__choice {
   list-style: none;
   margin-top: 1rem;
 }
 
-li > * {
+.QuestionnaireForm__choice input[type="radio"] {
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  box-sizing: border-box;
+  color: transparent;
+  height: 16px;
+  margin-right: .405em;
+  width: 16px;
+}
+
+.QuestionnaireForm__choice input,
+.QuestionnaireForm__choice label {
   display: inline-block;
   max-width: 80%;
   vertical-align: top;
 }
 
-.questionnaireForm {
-  max-width: 320px;
-  margin: 0 auto;
-  border: 1px solid #ccc;
-  padding: 2em;
-}
-
-input[type="radio"] {
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  border: 1px solid #ccc;
-  outline: none;
-  color: transparent;
-}
-
-.questionnaireForm label,
-.questionnaireForm input[name="other"] {
+.QuestionnaireForm label,
+.QuestionnaireForm input[name="other"] {
+  max-width: 180px;
   position: relative;
   top: 1px;
-  max-width: 180px;
 }
 
-.questionnaireForm input[name="other"] {
+.QuestionnaireForm input[name="other"] {
+  border: 0;
+  border-bottom: 1px solid #ccc;
   margin-left: 10px;
+  width: 100%;
 }

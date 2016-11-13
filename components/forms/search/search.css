@@ -1,35 +1,106 @@
-form {
-  display: table;
-  margin: 0 auto;
+.container {
+  align-items: center;
+  background: #174f7c;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  left: 0;
+  padding: 1em;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.go-back {
+  margin: 2em auto 1em;
+  max-width: 498px;
+  width: 100%;
+}
+
+.go-back a {
+  color: white;
+  font-family: 'Open Sans', helvetica, sans-serif;
+  font-size: 14px;
+  padding-right: .202em;
+  text-decoration: none;
+}
+
+.go-back a:hover,
+.go-back a:focus {
+  border-bottom: 1px solid white;
+}
+
+.go-back .fa-arrow-left:before {
+  bottom: 2px;
+  font-size: 10px;
+  position: relative;
+}
+
+.SearchForm {
+  background: #fefefe;
   border: 1px solid #ccc;
+  border-radius: 3px;
+  box-sizing: border-box;
+  display: flex;
+  height: 3.236em;
 }
 
-input {
-  border: none;
+.SearchForm__fieldset {
+  position: relative;
+}
+
+.SearchForm__input,
+.SearchForm__categories,
+.SearchForm__submit {
   background: none;
-  height: 4.078em;
-  line-height: 1.618em;
-  padding: 1.23em;
-  -webkit-appearance: none;
+  border: 1px solid transparent;
+  font-family: 'Open Sans', helvetica, sans-serif;
+  font-size: 14px;
 }
 
-input[name="submit"] {
-  cursor: pointer;
+.SearchForm__input {
+  box-sizing: border-box;
+  padding-left: .809em;
+  width: 320px;
 }
 
-input:focus,
-select:focus {
-  outline: none;
-}
-
-select {
-  border: none;
-  border-radius: 0;
+.SearchForm__categories {
   -webkit-appearance: none;
   -moz-appearance: none;
-  height: calc(4.078em - 1px);
-  padding: 0 1.23em;
-  cursor: pointer;
-  background-color: #f8f8f8;
+  background-color: rgb(232, 239, 245);
+  border: none;
+  border-radius: 0;
+  box-sizing: border-box;
   color: #666;
+  cursor: pointer;
+  height: 100%;
+  padding: 0 calc(12px + 1.618em) 0 .809em;
+}
+
+.SearchForm .fa-chevron-down {
+  background: transparent;
+  color: #333;
+  font-size: 12px;
+  height: 100%;
+  line-height: 3.236rem;
+  padding-right: .809em;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.SearchForm .fa-search {
+  font-size: 12px;
+  left: 35%;
+  pointer-events: none;
+  position: absolute;
+  top: 40%;
+}
+
+.SearchForm__submit {
+  cursor: pointer;
+  height: 100%;
+  width: 44px;
 }

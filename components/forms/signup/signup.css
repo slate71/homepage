@@ -1,33 +1,142 @@
-* {
+body {
+  background-color: #174f7c;
+}
+
+.go-back {
+  margin: 2em auto 1em;
+  max-width: 768px;
+  width: 66.66%;
+}
+
+.go-back a {
+  color: white;
+  font-family: 'Open Sans', helvetica, sans-serif;
+  font-size: 14px;
+  padding-right: .202em;
+  text-decoration: none;
+}
+
+.go-back a:hover,
+.go-back a:focus {
+  border-bottom: 1px solid white;
+}
+
+.go-back .fa-arrow-left:before {
+  bottom: 2px;
+  font-size: 10px;
+  position: relative;
+}
+
+.has-account,
+.has-account a {
+  color: white;
+  font-family: 'Open Sans', helvetica, sans-serif;
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.has-account a {
+  color: #40c3f6;
+}
+
+/* SignUpForm component styles */
+
+.SignUpForm {
+  background: white;
+  border: 1px solid #e3e9ef;
+  border-radius: 3px;
   box-sizing: border-box;
   color: #999;
-  font-size: 14px;
-  font-family: helvetica, sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  font-family: 'Open Sans', helvetica, sans-serif;
+  justify-content: space-between;
+  margin: 1em auto 0;
+  max-width: 768px;
+  padding: 3em;
+  width: 66.66%;
 }
 
-.signUpForm {
-  border: 1px solid #ccc;
-  max-width: 320px;
-  margin: 0 auto;
-  padding: 2em;
+.SignUpForm__firstname,
+.SignUpForm__lastname,
+.SignUpForm__email,
+.SignUpForm__password,
+.SignUpForm__birthdate,
+.SignUpForm__btn {
+  border: 1px solid #e3e9ef;
+  border-radius: 3px;
+  box-sizing: border-box;
+  flex: 1 1 100%;
+  line-height: 1.618rem;
+  margin-bottom: 1.618rem;
+  padding: 0;
+  position: relative;
 }
 
-label,
-input {
-  display: block;
+.SignUpForm__firstname,
+.SignUpForm__lastname {
+  flex: 0 1 49%;
+}
+
+.SignUpForm__firstname label,
+.SignUpForm__lastname label,
+.SignUpForm__email label,
+.SignUpForm__password label,
+.SignUpForm__birthdate label {
+  background-color: white;
+  bottom: 3.236em;
+  font-size: 12px;
+  left: .809em;
+  padding: 0 4px;
+  position: absolute;
+}
+
+.SignUpForm__birthdate label {
+  bottom: calc(3.236em + 2px);
+  opacity: 1;
+}
+
+.SignUpForm__firstname input,
+.SignUpForm__lastname input,
+.SignUpForm__email input,
+.SignUpForm__password input,
+.SignUpForm__birthdate input {
+  border: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', helvetica, sans-serif;
+  line-height: 1.618rem;
+  padding: .809rem;
+  transition: box-shadow .2s ease-in-out;
   width: 100%;
-  margin-bottom: 1em;
-  padding-left: 1em;
-  line-height: 2em;
 }
 
-label {
-  margin-bottom: 0;
+.SignUpForm__birthdate input {
+  color: #999;
 }
 
-input[type="button"] {
-  border: none;
-  border: 1px solid #ccc;
-  background-color: transparent;
+.SignUpForm__firstname input:focus,
+.SignUpForm__lastname input:focus,
+.SignUpForm__email input:focus,
+.SignUpForm__password input:focus,
+.SignUpForm__birthdate input:focus {
+  border-color: #c7d4df;
+  box-shadow: 1px 1px 2px rgba(23,79,124,.2);
+  outline: 0;
+}
+
+.SignUpForm__btn {
+  background-color: #174f7c;
+  box-sizing: border-box;
+  color: white;
+  cursor: pointer;
+  font-family: 'Open Sans', helvetica, sans-serif;
+  line-height: 1.618rem;
   margin-bottom: 0;
+  padding: .809rem;
+  width: 100%;
+}
+
+.SignUpForm__btn:focus {
+  box-shadow: 1px 1px 2px rgba(23,79,124,.2);
+  outline: 0;
 }

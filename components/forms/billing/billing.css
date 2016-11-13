@@ -1,33 +1,83 @@
 body {
-  background-color: #888;
+  background: #174f7c;
 }
 
-.clear-fix:after {
-  clear: both;
-  content: '';
-  display: block;
-}
-
-.billingForm {
-  background-color: white;
-  border: 1px solid #ccc;
-  color: #666;
-  font-family: 'Open Sans', helvetica, sans-serif;
-  font-weight: 100;
-  margin: 0 auto;
+.go-back {
+  margin: 2em auto 1em;
   max-width: 640px;
 }
 
-.billingForm section {
+.go-back a {
+  color: white;
+  font-family: 'Open Sans', helvetica, sans-serif;
+  font-size: 14px;
+  padding-right: .202em;
+  text-decoration: none;
+}
+
+.go-back a:hover,
+.go-back a:focus {
+  border-bottom: 1px solid white;
+}
+
+.go-back .fa-arrow-left:before {
+  bottom: 2px;
+  font-size: 10px;
+  position: relative;
+}
+
+/* BilingForm component styles */
+
+.BillingForm {
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  color: #666;
+  font-family: 'Open Sans', helvetica, sans-serif;
+  font-weight: 100;
+  margin: 0 auto 2em;
+  max-width: 640px;
+}
+
+.BillingForm__header {
+  margin-bottom: 2rem;
+  margin-top: 0;
+}
+
+.BillingForm__billing,
+.BillingForm__shipping {
   box-sizing: border-box;
   padding: 2em;
 }
 
-.billingForm section:first-child {
+.BillingForm__billing {
   border-bottom: 1px solid #ccc;
 }
 
-.billingForm input {
+.BillingForm__first,
+.BillingForm__last,
+.BillingForm__address1,
+.BillingForm__address2,
+.BillingForm__city,
+.BillingForm__country {
+  border: 0;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 48%;
+}
+
+.BillingForm label {
+  background-color: white;
+  bottom: 3.236em;
+  font-size: 12px;
+  left: .809em;
+  padding: 0 4px;
+  position: absolute;
+}
+
+.BillingForm input {
   border: 1px solid #ccc;
   border-radius: 3px;
   box-sizing: border-box;
@@ -40,33 +90,50 @@ body {
   width: 48%;
 }
 
-.billingForm input:nth-child(n+4) {
+.BillingForm__first input,
+.BillingForm__last input,
+.BillingForm__address1 input,
+.BillingForm__address2 input,
+.BillingForm__city input,
+.BillingForm__country input {
+  width: 100%;
+}
+
+.BillingForm fieldset:nth-child(n+4),
+.BillingForm input:nth-child(n+4) {
   margin-top: 1em;
 }
 
-.billingForm input:nth-child(2n) {
+.BillingForm fieldset:nth-child(2n),
+.BillingForm input:nth-child(2n) {
   margin-right: .8em;
 }
 
-.billingForm input[type="text"] {
+.BillingForm input[type="text"] {
   padding: .809em 1em;
 }
 
-.billingForm input[name="address-line-1"] {
+.BillingForm__address1 {
   width: 60%;
 }
-
-.billingForm input[name="address-line-2"] {
-  width: 36%;
+.BillingForm__address1 input {
+  width: 100%;
 }
 
-.billingForm input[name="same-as-billing"],
-.billingForm label[for="same-as-billing"] {
-  margin-top: 1em;
+.BillingForm__address2 {
+  width: 36%;
+}
+.BillingForm__address2 input {
+  width: 100%;
+}
+
+.BillingForm input[name="same-as-billing"],
+.BillingForm label[for="same-as-billing"] {
+  margin-top: 1.618em;
   width: auto;
 }
 
-.billingForm label[for="same-as-billing"] {
+.BillingForm label[for="same-as-billing"] {
   display: inline-block;
   position: relative;
   top: 2px;

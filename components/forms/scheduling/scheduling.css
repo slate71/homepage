@@ -1,24 +1,132 @@
-* {
-  box-sizing: border-box;
-  font-family: helvetica, sans-serif;
+body {
+  background: #174f7c;
+}
+
+.go-back {
+  margin: 2em auto 1em;
+  max-width: 768px;
+  width: 66.66%;
+}
+
+.go-back a {
+  color: white;
+  font-family: 'Open Sans', helvetica, sans-serif;
   font-size: 14px;
-  font-weight: 100;
+  padding-right: .205em;
+  text-decoration: none;
 }
 
-.schedulingForm {
-  max-width: 320px;
-  margin: 0 auto;
-  border: 1px solid #ccc;
+.go-back a:hover,
+.go-back a:focus {
+  border-bottom: 1px solid white;
+}
+
+.go-back .fa-arrow-left:before {
+  bottom: 2px;
+  font-size: 10px;
+  position: relative;
+}
+
+/* SchedulingForm component styles */
+
+.SchedulingForm {
+  background: white;
+  border: 1px solid #e3e9ef;
+  border-radius: 3px;
+  box-sizing: border-box;
+  color: #999;
+  font-family: 'Open Sans', helvetica, sans-serif;
+  margin: 1em auto 2em;
+  max-width: 768px;
   padding: 2em;
+  width: 66.66%;
 }
 
-.schedulingForm input {
-  display: block;
+.SchedulingForm__save,
+.SchedulingForm__discard,
+.SchedulingForm__event,
+.SchedulingForm__date,
+.SchedulingForm__time,
+.SchedulingForm__time-zone,
+.SchedulingForm__message,
+.SchedulingForm__phone,
+.SchedulingForm__email {
+  border: 1px solid #e3e9ef;
+  border-radius: 3px;
+  line-height: 1.618rem;
+  margin-bottom: 1.618rem;
+  padding: 0;
+  position: relative;
+}
+
+.SchedulingForm__save,
+.SchedulingForm__discard {
+  border: 0;
+  cursor: pointer;
+  margin-bottom: 0;
+  padding: .405em 1.618em;
+}
+
+.SchedulingForm__save:hover,
+.SchedulingForm__discard:hover {
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, .3);
+}
+
+.SchedulingForm__save {
+  background: #174f7c;
+  color: white;
+}
+
+.SchedulingForm__discard {
+  background: #ddd;
+}
+
+.SchedulingForm__time-zone,
+.SchedulingForm__message {
+  border: 0;
+}
+
+.SchedulingForm__time-zone select {
+  font-family: 'Open Sans';
+  height: 2em;
+}
+
+.SchedulingForm__event label,
+.SchedulingForm__date label,
+.SchedulingForm__time label,
+.SchedulingForm__message label,
+.SchedulingForm__phone label,
+.SchedulingForm__email label {
+  background-color: white;
+  bottom: 3.236em;
+  font-size: 12px;
+  left: .809em;
+  padding: 0 4px;
+  position: absolute;
+}
+
+.SchedulingForm__message label {
+  bottom: initial;
+  top: -1em;
+}
+
+.SchedulingForm__event input,
+.SchedulingForm__date input,
+.SchedulingForm__time input,
+.SchedulingForm__phone input,
+.SchedulingForm__email input {
+  border: 0;
+  box-sizing: border-box;
+  color: #999;
+  font-family: 'Open Sans', helvetica, sans-serif;
+  line-height: 1.618rem;
+  padding: .809rem;
+  transition: box-shadow .2s ease-in-out;
   width: 100%;
-  line-height: 3em;
-  padding-left: 1em;
 }
 
-.schedulingForm input[name="date"] ~ * {
-  margin-top: 1em;
+.SchedulingForm__message textarea {
+  border-color: #ddd;
+  height: 6em;
+  width: 100%;
 }
