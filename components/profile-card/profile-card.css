@@ -1,31 +1,35 @@
-/* To do:
-  - style with alluring and readable colors
-  - have padding on all sides
-  - have a border on all sides
-  - use font size 16px
-  - background and font colors I find pleasing
-  - use percentages for widths so it fit nicely on different devices
-*/
-* {
-  box-sizing: border-box;
-}
-
 body {
   background: #888;
 }
 
-.container {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
+a {
+  color: white;
+  display: block;
+  font-family: 'Open Sans', helvetica, sans-serif;
+  margin: 1.618em auto 0;
+  max-width: 415px;
+  text-decoration: none;
 }
 
-aside {
+a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  align-items: center;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/* ProfileCard component styles */
+
+.ProfileCard {
   background: white;
   border: 1px solid #ccc;
   box-sizing: border-box;
@@ -37,51 +41,51 @@ aside {
 }
 
 @media (max-width: 414px) {
-  aside {
-    position: absolute;
-    top: 0;
-    right: 0;
+  .ProfileCard {
     bottom: 0;
     left: 0;
     margin-top: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
   }
 }
 
-img {
-  display: block;
+.ProfileCard__img {
   border-radius: 50%;
+  display: block;
   margin: 0 auto;
   width: 33.33%;
 }
 
-a.fa {
-  text-decoration: none;
+.ProfileCard__nav {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ProfileCard__nav .ProfileCard__name,
+.ProfileCard__nav .ProfileCard__link {
+  font-size: 1.618rem;
+  line-height: 1.618rem;
+  margin: 1.618rem 0 0 0;
+}
+
+.ProfileCard .fa {
   color: black;
   font-size: 1.618rem;
-  margin-right: 1.618rem;
   margin-bottom: 1.618rem;
+  margin-right: 1.618rem;
+  text-decoration: none;
   transition: .3s;
   width: 25px;
 }
 
-a.fa:hover {
+.ProfileCard .fa:hover {
   transform: translateY(-3px);
 }
 
-nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-nav h3,
-nav a {
-  margin: 1.618rem 0 0 0;
-  line-height: 1.618rem;
-  font-size: 1.618rem;
-}
-
-p {
+.ProfileCard__bio {
   margin-top: 0;
 }
