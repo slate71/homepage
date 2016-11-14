@@ -75,8 +75,15 @@ nav ul {
 
 nav ul a {
   color: white;
+  display: inline-block;
+  line-height: 1.618em;
   padding: 0 1em;
   text-decoration: none;
+  transition: color .2s ease-in-out;
+}
+
+nav ul a:hover {
+  color: #333;
 }
 
 /* key frames */
